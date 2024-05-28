@@ -1,9 +1,12 @@
 # usable-tablet-item-for-ps-mdt
 create a tablet item for ps-mdt
 
+ - image for inventory:
+![mdttablet](https://github.com/brazeyoself/usable-tablet-item-for-ps-mdt/assets/88394932/63c82373-3a93-46f3-8e38-19256c12435f)
+
 • First go to qb-core/shared/items and add the following:
 ```
-mdttablet                    = { name = 'mdttablet', label = 'MD Tablet', weight = 500, type = 'item', image = 'tablet.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Mobile Datenbank des Staates' },
+mdttablet                    = { name = 'mdttablet', label = 'MD Tablet', weight = 500, type = 'item', image = 'mdttablet.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Mobile Datenbank des Staates' },
 ```
 • I assume you are using the pictures from qb-inventory, which has a tablet picture in it, otherwise you have to create one
 
@@ -56,7 +59,7 @@ RegisterNetEvent('mdt:client:Tablet', function()
             TriggerServerEvent('mdt:requestOfficerData')
         end
     else
-        QBCore.Functions.Notify("Zugriff verweigert!", "error")
+        QBCore.Functions.Notify("you cant do that !", "error")
     end
 end, false)
 ```
